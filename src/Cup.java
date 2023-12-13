@@ -1,9 +1,5 @@
 package src;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Cup {
 
     private Die dieOne;
@@ -28,6 +24,23 @@ public class Cup {
         }
         return count;
     }
+
+    public String[] result (int times)
+    {
+        String[] resultRolls = new String[times];
+        for (int i = 0; i < times; i++)
+        {
+            int roll1 = dieOne.roll();
+            int roll2 = dieTwo.roll();
+
+            int sum = roll1 + roll2;
+
+            resultRolls[i] = ("First die: " + roll1 + ", Second die: " + roll2 + ", Sum: " + sum);
+        }
+
+        return resultRolls;
+    }
+
 
 
 

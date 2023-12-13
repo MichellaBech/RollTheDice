@@ -1,7 +1,5 @@
 package src;
 
-import java.util.ArrayList;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,11 +9,18 @@ public class Main {
         Die dieTwo = new Die(4);
 
 
-        System.out.println(dieOne.roll());
+        System.out.println("You rolled the dice: " + dieOne.roll());
 
         Cup cup = new Cup(dieOne, dieTwo);
 
-        System.out.println(cup.howManyIdenticalThrows(55));
+        System.out.println("Identical throws: " + cup.howManyIdenticalThrows(55));
+
+        String[] result = cup.result(3);
+
+         //Print each value in the array
+       for (String value : result) {
+            System.out.println(value);
+        }
 
 
     }
